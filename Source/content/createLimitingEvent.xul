@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<dialog id="createlimitingevent-dialog" title="Create Limiting Event"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  buttons="accept,cancel"
+  buttonlabelcancel="Cancel"
+  buttonlabelaccept="Create"
+  ondialogaccept="return doOK();"
+  onload="return onLoad();"
+  ondialogcancel="return doCancel();">
+  <script type="application/javascript" src="chrome://timemanagement/content/createle.js"/>
+    <grid>
+		<columns>
+			<column flex="4"/>
+			<column flex="1"/>
+		</columns>
+		<rows>
+			<row>
+				<label value="Name"/>
+				<textbox id="le-name" multiline="false"/>
+			</row>
+			<row>
+				<label value="Deadline"/>
+				<datepicker id="le-deadline" type="popup"/>
+			</row>
+			<row>
+				<label value="Duration (days)"/>
+				<textbox id="le-duration" type="number" min="1" max="20"/>
+			</row>
+			<row>
+				<label value="Allocation (hours)"/>
+				<textbox id="le-allocation" type="number" min="1" max="1000"/>
+			</row>
+			<row>
+				<label value="Restrictive Mode"/>
+				<checkbox id="le-restrictive" checked="false"/>  
+			</row>
+			<row>
+				<label value="Website Domains (separated by commas)"/>
+				<textbox id="le-websites" multiline="true"/>
+			</row>
+		</rows>
+	</grid>
+</dialog>

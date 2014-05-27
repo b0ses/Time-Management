@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>timemanagement@cs.435</em:id>
+    <em:name>Time Management For Internet Users</em:name>
+    <em:version>1.0</em:version>
+	<em:type>2</em:type>
+	<em:creator>Daniel B., Jean M., Justin S.</em:creator>
+	
+	<em:description>
+	An application to restrict website usage upon approaching a deadline.  
+	
+	When creating a limiting event you need to enter:  
+	
+	NAME:  The name of the limiting event you want to create.  
+	DEADLINE:  The date you want your limiting event to end.  
+	DURATION:  The number of days before your deadline you want the limiting event to begin monitoring the websites used.
+	ALLOCATION:  (For normal mode) The amount of time you want to be able to access the websites specified.  (For restrictive mode) The amount of time you want to be able to access all websites and not be restricted. 
+	NORMAL MODE:  Create Limiting events to block specified websites after spending specified amount of time on these websites before a set deadline.  
+	RESTRICTIVE MODE:  Create Limiting events to block all websites aside from the specified websites after spending a specified about of time on these websites before a set deadline.
+	WEBSITES:  The websites you want to be restricted from (Normal Mode) or restricted to (Restrictive Mode).
+	</em:description>
+	<em:optionsURL>chrome://timemanagement/content/options.xul</em:optionsURL>
+	<em:aboutURL>chrome://timemanagement/content/about.xul</em:aboutURL>
+	<em:iconURL>chrome://timemanagement/skin/timemanagement-icon.png</em:iconURL>
+    <em:targetApplication> <!-- Firefox -->
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>10.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

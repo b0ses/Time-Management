@@ -1,0 +1,6 @@
+content  timemanagement         content/
+content  timemanagement         content/ contentaccessible=yes
+locale   timemanagement  en-US  locale/en-US/
+skin	 timemanagement	 classic/1.0	skin/
+overlay  chrome://browser/content/browser.xul chrome://timemanagement/content/browser.xul
+style	 chrome://global/content/customizeToolbar.xul	chrome://timemanagement/skin/skin.css

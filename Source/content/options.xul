@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow
+     title="Time Management Preferences"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<prefpane label="Time Management Preferences">
+		<preferences>
+			<preference id="default-duration" name="extensions.timemanagement.default.duration" type="int"/>
+			<preference id="default-allocation" name="extensions.timemanagement.default.allocation" type="int"/>
+			<preference id="default-restrictive" name="extensions.timemanagement.default.restrictive" type="bool"/>
+			<preference id="default-favorites" name="extensions.timemanagement.default.favorites" type="string"/>
+		</preferences>
+
+		<groupbox>
+			<caption label="Defaults"/>
+			<grid>
+				<columns>
+					<column flex="4"/>
+					<column flex="1"/>
+				</columns>
+				<rows>
+					<row>
+						<label value="Limiting Event Duration (days)"/>
+						<textbox preference="default-duration" type="number" min="1" max="20"/>
+					</row>
+					<row>
+						<label value="Limiting Event Time Allocation (hours)"/>
+						<textbox preference="default-allocation" type="number" min="1" max="20"/>
+					</row>
+					<row>
+						<label value="Restrictive Mode"/>
+						<checkbox preference="default-restrictive" checked="false"/>  
+					</row>
+					<row>
+						<label value="Favorite Domains (separated by commas)"/>
+						<textbox preference="default-favorites" multiline="true"/>
+					</row>
+				</rows>
+			</grid>
+		</groupbox>	
+	</prefpane>
+</prefwindow>

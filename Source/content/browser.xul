@@ -1,0 +1,29 @@
+<?xml-stylesheet href="chrome://timemanagement/skin/skin.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://timemanagement/locale/browser.dtd">
+<overlay onload="TimeManagement.Browser.init();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/javascript" src="chrome://timemanagement/content/browser.js"/>
+  <toolbarpalette id="BrowserToolbarPalette">
+	<toolbarbutton id="timemanagement-toolbar-button" label="Time Management" tooltiptext="Time Management" type="menu">
+		<menupopup>
+			<stringbundleset id="stringbundleset"> 
+			<stringbundle id="timeManagementBundle" 
+                  src="chrome://timemanagement/locale/browser.properties"/>
+			</stringbundleset>
+			<menuitem label="Create Limiting Event" oncommand="TimeManagement.Browser.createle(event)" />
+			<menuitem label="Edit Limiting Event" oncommand="TimeManagement.Browser.editle(event)"/>
+			<menuitem label="Delete Limiting Event" oncommand="TimeManagement.Browser.deletele(event)"/>
+		</menupopup>
+	</toolbarbutton>
+  </toolbarpalette>
+  <menubar id="main-menubar">  
+  <menu label="LimitingEvent" insertbefore="tools-menu">  
+    <menupopup>  
+      <menuitem label="Create Limiting Event" oncommand="TimeManagement.Browser.createle(event)"/>  
+      <menuitem label="Edit Limiting Event" oncommand="TimeManagement.Browser.editle(event)"/> 
+      <menuitem label="Delete Limiting Event" oncommand="TimeManagement.Browser.deletele(event)"/>
+    </menupopup>  
+  </menu>  
+  </menubar> 
+</overlay>
+
